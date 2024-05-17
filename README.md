@@ -6,7 +6,9 @@ This project provides a comprehensive ML pipeline designed to predict property p
 
 ## Features
 MLflow Integration: Seamlessly manage the entire ML lifecycle, from experimentation to deployment.
+
 Hydra Configuration: Simplify parameter management and configuration with Hydra.
+
 Weights & Biases Tracking: Track experiments, visualize results, and manage artifacts with Weights & Biases.
 
 ## Dataset
@@ -23,3 +25,11 @@ conda env create -f environment.yml
 
 ### Get API key for Weights and Biases
 wandb login [your API key]
+
+## Usage
+### Run the whole Pipeline:
+mlflow run .
+
+### Run each step of the pipeline defined in the config.yaml, for example the training step:
+mlflow run . -P steps="train_random_forest"
+
