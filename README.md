@@ -31,5 +31,7 @@ wandb login [your API key]
 mlflow run .
 
 ### Run each step of the pipeline defined in the config.yaml, for example the training step:
-mlflow run . -P steps="train_random_forest"
+mlflow run . -P steps="train_random_forest
 
+## Evaluate the Model:
+mlflow run . -P steps=test_regression_model
